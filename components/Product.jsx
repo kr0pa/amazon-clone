@@ -4,6 +4,7 @@ import { useState } from "react";
 import Currency from "react-currency-formatter";
 import { addToBasket } from "../slices/basketSlice";
 import { useDispatch } from "react-redux";
+import New from "./New";
 
 function Product({ id, title, price, description, category, image }) {
   const [rating] = useState(Math.floor(Math.random() * (5 - 1 + 1)) + 1);
@@ -31,6 +32,8 @@ function Product({ id, title, price, description, category, image }) {
 
   return (
     <div className="flex flex-col justify-between z-30 h-96 bg-white m-4 cursor-default flex-grow">
+      <New />
+
       <div>
         <div className="flex justify-end mb-3 mr-2 mt-1">
           <p className="text-xs text-gray-400 font-medium">{category}</p>
