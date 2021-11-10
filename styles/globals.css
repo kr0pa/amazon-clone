@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+    @apply cursor-pointer p-3 border border-amazon_blue hover:border-white;
+  }
+
+  .bottomHeader {
+    @apply flex items-center h-8 px-2 cursor-pointer border border-amazon_blue-light hover:border-white;
+  }
+
+  .button {
+    @apply p-2 bg-gradient-to-b from-yellow-200 to-yellow-400 font-extrabold border border-yellow-300 text-xs w-full rounded-sm focus:outline-none focus:ring-yellow-500 active:from-yellow-500;
+  }
+}
