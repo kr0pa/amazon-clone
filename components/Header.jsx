@@ -40,14 +40,16 @@ function Header() {
         </div>
 
         <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
-          <div onClick={!session ? signIn : signOut} className="link">
-            {session ? (
-              <p>Witaj, {session?.user.name}!</p>
-            ) : (
-              <p>Zaloguj się!</p>
-            )}
-            <p className="font-extrabold sm:text-sm">Konto & Listy</p>
-          </div>
+          {!router.pathname.includes("/auth/signin") && (
+            <div onClick={!session ? signIn : signOut} className="link">
+              {session ? (
+                <p>Witaj, {session?.user.name}!</p>
+              ) : (
+                <p>Zaloguj się!</p>
+              )}
+              <p className="font-extrabold sm:text-sm">Konto & Listy</p>
+            </div>
+          )}
 
           <div className="link">
             <p>Zwroty</p>
